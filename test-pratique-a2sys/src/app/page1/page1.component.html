@@ -1,1 +1,62 @@
-<p>page1 works!</p>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-8 mx-auto">
+        <div class="card">
+          <div class="card-header text-center bg-primary text-white">
+           <span>Relevé de mon compte</span>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <form>
+                  <div class="input-group mb-3">
+                    <input type="text" id="table-filtering-search" class="form-control" placeholder="2019" aria-label="annee" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <span class="input-group-text bg-info" id="basic-addon2">Phone</span>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-3">
+                <button class="btn btn-success">
+                  <span class="text-white">Dépôt</span>
+                </button>
+              </div>
+              <div class="col-md-3">
+                <button class="btn btn-danger">
+                  <span class="text-white">Retrait</span>
+                </button>
+              </div>
+            </div>
+            <div class="row">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nature</th>
+                    <th scope="col">Reference</th>
+                    <th scope="col">Dépôt</th>
+                    <th scope="col">Retrait</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let ope of operation">
+                    <td></td>
+                    <td>
+                      
+                      {{ope.nature}}
+                    
+                    </td>
+                    <td>{{ope.reference}}</td>
+                    <td>{{ope.montant}}</td>
+                    <td>{{ope.montant}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
